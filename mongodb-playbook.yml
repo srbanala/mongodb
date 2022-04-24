@@ -16,10 +16,12 @@
       ansible.builtin.yum: 
          name: mongodb-org
          state: present
+      become: yes
     
     - name: Start MongoDB service
       ansible.builtin.yum:
          name: mongod
          state: started
+      become: yes
 
 
