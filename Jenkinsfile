@@ -6,8 +6,7 @@ pipeline {
     stages{
         stage('build'){
             steps {
-                sh 'sudo yum install pip'
-                sh 'python pip install ansible'
+                sh 'sudo yum install ansible'
             }
             
         }
