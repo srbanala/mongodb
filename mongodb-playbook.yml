@@ -2,8 +2,7 @@
   hosts: 127.0.0.1
   tasks:
     - name: Install prerequisites
-      ansible.builtin.file: /etc/yum.repos.d/mongodb-org-5.0.repo
-        state: touch
+      command: touch /etc/yum.repos.d/mongodb-org-5.0.repo
       become: yes
     
     - name: Copy mongodb-org-5.o.repo file
