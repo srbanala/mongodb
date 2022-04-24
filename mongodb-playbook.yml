@@ -3,6 +3,13 @@
   tasks:
     - name: Install prerequisites
       command: touch /etc/yum.repos.d/mongodb-org-5.0.repo
+      become: yes
+    
+    - name: Copy mongodb-org-5.o.repo file
+      ansible.builtin.copy: 
+        src: mongodb-org-5.0.repo 
+        dest: /etc/yum.repos.d/mongodb-org-5.0.repo
+        state: present
 
     - name: Install Mongodb package
       ansible.builtin.yum: 
