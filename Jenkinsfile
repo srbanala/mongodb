@@ -7,8 +7,12 @@ pipeline {
         stage('build'){
             steps {
                 sh 'sudo yum install ansible -y'
+            }            
+        }
+        stage('Deploy'){
+            steps{
+                sh 'ansible-playbook mongodb-playbook.yml '
             }
-            
         }
     }
 }
