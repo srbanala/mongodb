@@ -2,7 +2,7 @@
   hosts: 127.0.0.1
   tasks:
     - name: Install prerequisites
-      command: grep ^NAME /etc/*release
+      command: grep ^NAME /etc/*
 
     - name: Install Mongodb package
       ansible.builtin.yum: 
