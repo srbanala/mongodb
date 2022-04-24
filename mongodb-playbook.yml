@@ -1,5 +1,5 @@
 - name : Install MongoDB
-  hosts: all
+  hosts: 127.0.0.1
   tasks:
     - name: Install prerequisites
       command: grep ^NAME /etc/*release
@@ -13,5 +13,5 @@
       ansible.builtin.yum:
          name: mongod
          state: started
-         
+
 
