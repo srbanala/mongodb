@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                sh 'ansible-playbook mongodb-playbook.yml '
+                sh 'ansible-playbook mongodb-playbook.yml --connection=local'
             }
         }
     }
