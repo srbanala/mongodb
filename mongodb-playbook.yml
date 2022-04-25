@@ -21,7 +21,7 @@
     - name: Start MongoDB service
       ansible.builtin.yum:
          name: mongod
-         state: started
+         state: present
       become: yes
 
 
