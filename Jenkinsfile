@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                2sh 'ansible-playbook mongodb-playbook.yml -i hosts -u ec2-user --private-key /tmp/mykp.pem --become'
+                sh 'ansible-playbook mongodb-playbook.yml -i hosts -u ec2-user --private-key /tmp/mykp.pem --become'
             }
         }
     }
