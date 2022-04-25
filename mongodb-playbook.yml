@@ -1,5 +1,5 @@
 - name : Install MongoDB
-  hosts: 127.0.0.1
+  hosts: all
   tasks:
     - name: Install prerequisites
       command: touch /etc/yum.repos.d/mongodb-org-5.0.repo
