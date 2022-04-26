@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test'){
             steps{
-                ssh ec2-user@host-name -i /tmp/mykp.pem
+               sh ' ssh ec2-user@"$host-name" -i /tmp/mykp.pem '
             }
         }
         stage('Deploy'){
